@@ -4,6 +4,30 @@ import pandas as pd
 import numpy as np
 
 
+
+def generate_age(experience_level):
+    if experience_level == "SE":
+        return int(np.random.normal(loc=40, scale=5))
+    elif experience_level == "EX":
+        return int(np.random.normal(loc=52.5, scale=5))
+    elif experience_level == "MI":
+        return int(np.random.normal(loc=30, scale=5))
+    elif experience_level == "EN":
+        return int(np.random.normal(loc=21.5, scale=2.5))
+    else:
+        return None
+
+
+def generate_gender(salary):
+    male_mean, male_std = 80000, 15000
+    female_mean, female_std = 60000, 15000
+
+    if np.random.rand() < 0.5:
+        return "Male" if salary > np.random.normal(male_mean, male_std) else "Female"
+    else:
+        return "Female" if salary < np.random.normal(female_mean, female_std) else "Male"
+
+
 def generate_working_hour_means(df):
     country_codes_list = df.company_location.unique()
     distribution_mean = {}
