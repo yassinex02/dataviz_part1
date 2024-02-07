@@ -29,7 +29,7 @@ def generate_working_hours(df, distribution_mean:dict):
 def main():
     df_salaries = pd.read_csv("ds_salaries.csv")
     distribution_mean = generate_working_hour_means(df_salaries)
-    df_salaries = generate_working_hour_means(df_salaries, distribution_mean)
+    df_salaries = generate_working_hours(df_salaries, distribution_mean)
     #df_salaries.to_csv('path', index=False)
 
 if __name__ == "__main__":
