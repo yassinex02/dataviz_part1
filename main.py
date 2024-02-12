@@ -11,7 +11,7 @@ app = dash.Dash(__name__)
 df_salaries = pd.read_csv("data/df_salaries.csv")
 
 app.layout = html.Div(children=[
-    html.H1(children='Which Job should I choose?',
+    html.H1(children='Where Should I Work? Rational Insights for Data Careers',
             style={'margin': '0px', 'padding': '0'}),
     html.Div([
         html.Div([
