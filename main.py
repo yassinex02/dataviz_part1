@@ -1,9 +1,9 @@
 from dash import dash, dcc, html, Input, Output
 import pandas as pd
 
-from plots import boxplot_salary_gender_job_title, histogram_salary_company_size, \
+from src.plots import boxplot_salary_gender_job_title, histogram_salary_company_size, \
     histogram_weekly_hours_seniority_level, heatmap_median_salary
-from utils import get_frequent_company_locations
+from src.utils import get_frequent_company_locations
 
 
 app = dash.Dash(__name__)
