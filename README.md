@@ -1,1 +1,1 @@
-[Screenshot of the Dashboard](data/dashboard_ss.jpeg)
+![alt text](data/dashboard_ss.jpeg)
